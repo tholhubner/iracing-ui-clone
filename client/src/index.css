@@ -17,7 +17,7 @@ button:hover {
 
 header {
   background-color: #181A1D;
-  height: 60px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
 	border-bottom: #2D2F34 1px solid;
@@ -151,8 +151,61 @@ main {
 	align-items: center;
 }
 
+.license-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.license-group {
+	display: flex;
+	flex-direction: row;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+.license-item {
+	width: 85px;
+	height: 22px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1px;
+}
+
+.license-a {
+	color: #006EFF;
+	background-color: #032E6F;
+	border: #006EFF 1px solid;
+}
+
+.license-b {
+	color: #33CC00;
+	background-color: #165509;
+	border: #33CC00 1px solid;
+}
+
+.license-c {
+	color: #FFCC00;
+	background-color: #50410A;
+	border: #FFCC00 1px solid;
+}
+
+.license-d {
+	color: #FF6600;
+	background-color: #692C09;
+	border: #FF6600 1px solid;
+}
+
+.license-rookie {
+	color: #E1251C;
+	background-color: #5D1214;
+	border: #E1251C 1px solid;
+}
+
 .nav-item-button-text {
-	padding-top: 2px;
+	padding-top: 5px;
 }
 
 .nav-item-button-text-icon {
@@ -169,6 +222,17 @@ main {
 .nav-title-text {
 	font-size: 1.21rem;
 	padding-left: 7px;
+}
+
+.safety-rating-text {
+	font-weight: bolder;
+	padding-right: 3px;
+	padding-left: 5px;
+}
+
+.safety-rating-text-road {
+	font-weight: bolder;
+	padding-right: 3px;
 }
 
 .title-with-icon {

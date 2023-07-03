@@ -4,6 +4,7 @@ import moment from "moment"
 
 import { setShowNavigation } from "../app/reducers/variousReducer"
 import { getIcon } from "../helpers/iconHelper"
+import LicenseCluster from "./LicenseCluster"
 
 function Header() {
   const showNavigation = useSelector((state) => state.various.showNavigation)
@@ -42,6 +43,7 @@ function Header() {
         <button className="header-button">{getIcon("connection")}</button>
         <button className="header-button-clear">{getIcon("updates")}</button>
         <button className="header-button-clear">{getIcon("subscriptions")}</button>
+        <LicenseCluster />
       </div>
     </header>
   )

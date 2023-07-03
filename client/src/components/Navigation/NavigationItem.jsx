@@ -41,4 +41,4 @@ function NavigationItem({
 	)
 }
 
-export { NavigationItem }
+export default NavigationItem

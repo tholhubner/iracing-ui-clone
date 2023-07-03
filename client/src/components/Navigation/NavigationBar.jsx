@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { getIcon } from "../../helpers/iconHelper"
 import { bottomNavigation, topNavigation } from "../../testData/navigation"
-import { NavigationItem } from "./NavigationItem"
 import { useDispatch, useSelector } from "react-redux"
+import NavigationItem from "./NavigationItem"
 
 function NavigationBar() {
 	const showNavigation = useSelector((state) => state.various.showNavigation)

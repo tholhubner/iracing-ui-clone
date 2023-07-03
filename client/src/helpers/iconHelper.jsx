@@ -1,7 +1,9 @@
 import AccessTimeIcon from "@mui/icons-material/AccessTime"
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 import CampaignIcon from "@mui/icons-material/Campaign"
+import ChangeCircleIcon from "@mui/icons-material/ChangeCircle"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
+import DirectionsIcon from "@mui/icons-material/Directions"
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents"
 import FlagIcon from "@mui/icons-material/Flag"
 import GarageIcon from "@mui/icons-material/Garage"
@@ -13,6 +15,7 @@ import LeaderboardIcon from "@mui/icons-material/Leaderboard"
 import LeakAddIcon from "@mui/icons-material/LeakAdd"
 import MonitorIcon from "@mui/icons-material/Monitor"
 import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined"
+import RefreshIcon from "@mui/icons-material/Refresh"
 import SearchIcon from "@mui/icons-material/Search"
 import SettingsIcon from "@mui/icons-material/Settings"
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag"
@@ -22,6 +25,7 @@ import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined"
 import SupportAgentIcon from "@mui/icons-material/SupportAgent"
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt"
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave"
+import TurnRightIcon from "@mui/icons-material/TurnRight"
 import VideocamIcon from "@mui/icons-material/Videocam"
 import WalletIcon from "@mui/icons-material/Wallet"
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded"
@@ -44,6 +48,12 @@ export function getIcon(icon) {
 			break
 		case "connection":
 			display = <LanIcon fontSize="small" />
+			break
+		case "dirtoval":
+			display = <ChangeCircleIcon fontSize="xs" />
+			break
+		case "dirtroad":
+			display = <DirectionsIcon fontSize="xs" />
 			break
 		case "display":
 			display = <MonitorIcon fontSize="small" />
@@ -72,11 +82,17 @@ export function getIcon(icon) {
 		case "league":
 			display = <LeaderboardIcon fontSize="medium" />
 			break
+		case "oval":
+			display = <RefreshIcon fontSize="xs" />
+			break
 		case "paintdrop":
 			display = <WaterDropIcon fontSize="medium" />
 			break
 		case "replay":
 			display = <VideocamIcon fontSize="medium" />
+			break
+		case "road":
+			display = <TurnRightIcon fontSize="small" className="pb-1" />
 			break
 		case "search":
 			display = <SearchIcon fontSize="medium" />
