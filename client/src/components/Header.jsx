@@ -1,13 +1,19 @@
 import { useDispatch, useSelector } from "react-redux"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import moment from "moment"
 
 import { setShowNavigation } from "../app/reducers/variousReducer"
 import { getIcon } from "../helpers/iconHelper"
 
 function Header() {
   const showNavigation = useSelector((state) => state.various.showNavigation)
+  const [currentTime, setCurrentTime] = useState(moment())
   const [navState, setNavState] = useState(showNavigation)
   const dispatch = useDispatch()
+
+  const clockTimer = setTimeout(() => {
+    setCurrentTime(moment())
+  }, 1000)
 
   return (
     <header>
@@ -29,7 +35,7 @@ function Header() {
         <div className="badge badge-neutral pt-1 px-1 mx-1">100,000 ONLINE</div>
       </div>
       <div className="header-right">
-        <div className="header-clock">{getIcon("clock")}11:54:22pm</div>
+        <div className="header-clock">{getIcon("clock")}{moment(currentTime).format("h:mm:ss a")}</div>
         <button className="header-button">{getIcon("balance")}<span className="pt-0.5">$20.00</span></button>
         <button className="header-button">{getIcon("speaker")}</button>
         <button className="header-button">{getIcon("display")}</button>
