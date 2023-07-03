@@ -7,9 +7,29 @@ import { getIcon } from "../helpers/iconHelper"
 import LicenseCluster from "./LicenseCluster"
 
 function Header() {
+  const testingLicenses = {
+    oval: {
+      safetyRating: 3.34,
+      iRating: 1234
+    },
+    road: {
+      safetyRating: 3.23,
+      iRating: 2341
+    },
+    dirtOval: {
+      safetyRating: 2.54,
+      iRating: 1355
+    },
+    dirtRoad: {
+      safetyRating: 1.24,
+      iRating: 1223
+    }
+  }
+
   const showNavigation = useSelector((state) => state.various.showNavigation)
   const [currentTime, setCurrentTime] = useState(moment())
   const [navState, setNavState] = useState(showNavigation)
+  const [userLicenses, setUserLicenses] = useState(testingLicenses)
   const dispatch = useDispatch()
 
   const clockTimer = setTimeout(() => {
@@ -43,7 +63,7 @@ function Header() {
         <button className="header-button">{getIcon("connection")}</button>
         <button className="header-button-clear">{getIcon("updates")}</button>
         <button className="header-button-clear">{getIcon("subscriptions")}</button>
-        <LicenseCluster />
+        <LicenseCluster userLicenses={userLicenses} />
       </div>
     </header>
   )
