@@ -2,50 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, #root, .App {
+  height: 100%;
+}
+
 body {
   font-family: sans-serif;
   font-size: 12px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
+	background-color: #181A1D;
 }
 
-header,
-main,
-footer {
-  padding: 12px;
+button {
+	width: 200px;
+	height: 30px;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: left;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+button:hover {
+	background-color: #2D2F34;
 }
 
 header {
   background-color: #181A1D;
   height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 	border-bottom: #2D2F34 1px solid;
 }
 
-nav {
-  background-color: rgba(19, 20, 22, 0.75);
+main {
+  background-color: rgba(19, 20, 22, 0.97);
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+	transform: scaleX(1);
+	padding: 12px;
+}
+
+.navigation {
+  background-color: rgba(19, 20, 22, 0.97);
   width: 250px;
+	height: calc(100vh - 60px);
   display: flex;
 	flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 	border-right: #2D2F34 1px solid;
 }
 
-main {
-  background-color: rgba(19, 20, 22, 0.75);
-  width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
+.navigation-hidden {
+	width: 0%;
 }
 
-footer {
-  background-color: #181A1D;
-  height: 100px;
-  display: flex;
-  justify-content: center;
+.blue-button {
+	color: #fff;
+	background-color: #8BA7E4;
+}
+
+.blue-button:hover {
+	background-color: #6d90dd;
+}
+
+.bottom-nav {
+	justify-self: flex-end;
 	border-top: #2D2F34 1px solid;
 }
 
@@ -53,9 +83,26 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-	background-image: url("./assets/nurbs_1920-1200.jpg");
+	background-image: url("./assets/f1-4k.jpg");
 	background-color: #181A1D;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 	border-bottom: #2D2F34 1px solid;
+}
+
+.dark-button {
+	color: #fff;
+	background-color: #393B3F;
+}
+
+.nav-item-button-text {
+	padding-top: 2px;
+}
+
+.nav-item-button-text-icon {
+	padding-top: 2px;
+	padding-left: 7px;
 }
 
 .nav-item {
@@ -74,4 +121,8 @@ footer {
 	flex-direction: row;
 	justify-content: flex-start;
 	width: 100%;
+}
+
+.top-nav {
+	justify-self: flex-start;
 }

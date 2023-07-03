@@ -1,18 +1,22 @@
-import React from "react"
+import { store } from './app/store'
+import { Provider } from 'react-redux'
+
 import {
   Header,
-  Navigation
 } from "./components"
+import { NavigationBar } from "./components/Navigation"
 
 function App() {
   return (
-    <div>
-      <Header />
-      <div className="content">
-        <Navigation />
-        <main>Series List</main>
+    <Provider store={store}>
+      <div>
+        <Header />
+        <div className="content">
+          <NavigationBar />
+          <main>Series List</main>
+        </div>
       </div>
-    </div>
+    </Provider>
   )
 }
 
