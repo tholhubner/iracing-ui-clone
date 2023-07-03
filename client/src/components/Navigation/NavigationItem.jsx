@@ -21,7 +21,7 @@ function NavigationItem({
 					.map((item, index) => (
 						<button
 							key={index}
-							className={`${item.type}-button`}
+							className={["navigation-button", `${item.type}-button`].join(" ")}
 							onClick={item.action}
 						>
 							{item.icon && getIcon(item.icon)}

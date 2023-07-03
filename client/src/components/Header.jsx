@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
-import { setShowNavigation } from "../app/reducers/variousReducer"
 import { useState } from "react"
+
+import { setShowNavigation } from "../app/reducers/variousReducer"
+import { getIcon } from "../helpers/iconHelper"
 
 function Header() {
   const showNavigation = useSelector((state) => state.various.showNavigation)
@@ -25,6 +27,15 @@ function Header() {
         <div className="badge badge-neutral pt-1 px-1 mx-1">WEEK 2/13</div>
         <div className="badge badge-neutral pt-1 px-1 mx-1">5,552,993,102 LAPS</div>
         <div className="badge badge-neutral pt-1 px-1 mx-1">100,000 ONLINE</div>
+      </div>
+      <div className="header-right">
+        <div className="header-clock">{getIcon("clock")}11:54:22pm</div>
+        <button className="header-button">{getIcon("balance")}<span className="pt-0.5">$20.00</span></button>
+        <button className="header-button">{getIcon("speaker")}</button>
+        <button className="header-button">{getIcon("display")}</button>
+        <button className="header-button">{getIcon("connection")}</button>
+        <button className="header-button-clear">{getIcon("updates")}</button>
+        <button className="header-button-clear">{getIcon("subscriptions")}</button>
       </div>
     </header>
   )

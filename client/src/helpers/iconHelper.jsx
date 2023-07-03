@@ -1,12 +1,17 @@
+import AccessTimeIcon from "@mui/icons-material/AccessTime"
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
+import CampaignIcon from "@mui/icons-material/Campaign"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents"
 import FlagIcon from "@mui/icons-material/Flag"
 import GarageIcon from "@mui/icons-material/Garage"
 import GroupsSharpIcon from "@mui/icons-material/GroupsSharp"
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
+import LanIcon from "@mui/icons-material/Lan"
 import LanguageIcon from "@mui/icons-material/Language"
 import LeaderboardIcon from "@mui/icons-material/Leaderboard"
+import LeakAddIcon from "@mui/icons-material/LeakAdd"
+import MonitorIcon from "@mui/icons-material/Monitor"
 import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined"
 import SearchIcon from "@mui/icons-material/Search"
 import SettingsIcon from "@mui/icons-material/Settings"
@@ -15,6 +20,7 @@ import SmartToyOutlinedIcon from "@mui/icons-material/SmartToyOutlined"
 import SportsMotorsportsOutlinedIcon from "@mui/icons-material/SportsMotorsportsOutlined"
 import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined"
 import SupportAgentIcon from "@mui/icons-material/SupportAgent"
+import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt"
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave"
 import VideocamIcon from "@mui/icons-material/Videocam"
 import WalletIcon from "@mui/icons-material/Wallet"
@@ -27,8 +33,20 @@ export function getIcon(icon) {
 		case "ai":
 			display = <SmartToyOutlinedIcon fontSize="medium" />
 			break
+		case "balance":
+			display = <CreditCardIcon fontSize="small" />
+			break
 		case "calendar":
 			display = <CalendarMonthIcon fontSize="medium" />
+			break
+		case "clock":
+			display = <AccessTimeIcon fontSize="small" className="pr-1 pb-0.5" />
+			break
+		case "connection":
+			display = <LanIcon fontSize="small" />
+			break
+		case "display":
+			display = <MonitorIcon fontSize="small" />
 			break
 		case "flag":
 			display = <FlagIcon fontSize="medium" />
@@ -69,8 +87,14 @@ export function getIcon(icon) {
 		case "settings":
 			display = <SettingsIcon fontSize="medium" />
 			break
+		case "speaker":
+			display = <CampaignIcon fontSize="small" />
+			break
 		case "store":
 			display = <ShoppingBagIcon fontSize="medium" />
+			break
+		case "subscriptions":
+			display = <LeakAddIcon fontSize="small" />
 			break
 		case "support":
 			display = <LanguageIcon fontSize="medium" />
@@ -80,6 +104,9 @@ export function getIcon(icon) {
 			break
 		case "trophy":
 			display = <EmojiEventsIcon fontSize="medium" />
+			break
+		case "updates":
+			display = <SystemUpdateAltIcon fontSize="small" />
 			break
 		case "wallet":
 			display = <WalletIcon fontSize="medium" />
