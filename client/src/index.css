@@ -26,7 +26,7 @@ header {
 main {
   background-color: rgba(19, 20, 22, 0.97);
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
 	transform: scaleX(1);
@@ -36,7 +36,7 @@ main {
 .navigation {
   background-color: rgba(19, 20, 22, 0.97);
   width: 250px;
-	height: calc(100vh - 60px);
+	height: calc(100vh - 50px);
   display: flex;
 	flex-direction: column;
   justify-content: space-between;

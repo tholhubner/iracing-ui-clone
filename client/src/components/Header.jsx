@@ -33,7 +33,7 @@ function Header() {
         />
         <div className="badge badge-neutral pt-1 px-1 mx-1">WEEK 2/13</div>
         <div className="badge badge-neutral pt-1 px-1 mx-1">5,552,993,102 LAPS</div>
-        <div className="badge badge-neutral pt-1 px-1 mx-1">100,000 ONLINE</div>
+        <div className="badge badge-neutral pt-1 px-1 mx-1">10,000 ONLINE</div>
       </div>
       <div className="header-right">
         <div className="header-clock">{getIcon("clock")}{moment(currentTime).format("h:mm:ss a")}</div>
