@@ -224,6 +224,22 @@ main {
 	padding-left: 7px;
 }
 
+.profile-button {
+	background-color: #181A1D;
+	height: 100%;
+	width: 40px;
+	padding: 0px;
+}
+
+.profile-button:hover {
+	background-color: #181A1D;
+}
+
+/* .profile-button-icon {
+	height: auto;
+	width: auto;
+} */
+
 .safety-rating-text {
 	font-weight: bolder;
 	padding-right: 3px;

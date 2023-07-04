@@ -5,6 +5,7 @@ import moment from "moment"
 import { setShowNavigation } from "../app/reducers/variousReducer"
 import { getIcon } from "../helpers/iconHelper"
 import LicenseCluster from "./LicenseCluster"
+import ProfileButton from "./ProfileButton"
 
 function Header() {
   const testingLicenses = {
@@ -64,6 +65,9 @@ function Header() {
         <button className="header-button-clear">{getIcon("updates")}</button>
         <button className="header-button-clear">{getIcon("subscriptions")}</button>
         <LicenseCluster userLicenses={userLicenses} />
+        <ProfileButton
+          username="Tyler Holhubner"
+        />
       </div>
     </header>
   )
