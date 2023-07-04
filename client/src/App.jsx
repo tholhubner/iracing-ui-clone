@@ -5,6 +5,7 @@ import {
   Header,
 } from "./components"
 import { NavigationBar } from "./components/Navigation"
+import QuickAccess from "./components/QuickAccess"
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         <Header />
         <div className="content">
           <NavigationBar />
-          <main>Series List</main>
+          <main>
+            <QuickAccess />
+          </main>
         </div>
       </div>
     </Provider>
