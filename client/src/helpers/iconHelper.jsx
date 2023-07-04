@@ -9,11 +9,15 @@ import FlagIcon from "@mui/icons-material/Flag"
 import GarageIcon from "@mui/icons-material/Garage"
 import GroupsSharpIcon from "@mui/icons-material/GroupsSharp"
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
+import KeyIcon from "@mui/icons-material/Key"
 import LanIcon from "@mui/icons-material/Lan"
 import LanguageIcon from "@mui/icons-material/Language"
 import LeaderboardIcon from "@mui/icons-material/Leaderboard"
 import LeakAddIcon from "@mui/icons-material/LeakAdd"
+import LoginIcon from "@mui/icons-material/Login";
 import MonitorIcon from "@mui/icons-material/Monitor"
+import PersonIcon from "@mui/icons-material/Person"
+import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew"
 import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined"
 import RefreshIcon from "@mui/icons-material/Refresh"
 import SearchIcon from "@mui/icons-material/Search"
@@ -25,6 +29,7 @@ import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined"
 import SupportAgentIcon from "@mui/icons-material/SupportAgent"
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt"
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave"
+import TripOriginIcon from "@mui/icons-material/TripOrigin"
 import TurnRightIcon from "@mui/icons-material/TurnRight"
 import VideocamIcon from "@mui/icons-material/Videocam"
 import WalletIcon from "@mui/icons-material/Wallet"
@@ -79,14 +84,32 @@ export function getIcon(icon) {
 		case "home":
 			display = <HomeOutlinedIcon fontSize="medium" />
 			break
+		case "key":
+			display = <KeyIcon fontSize="small" />
+			break
 		case "league":
 			display = <LeaderboardIcon fontSize="medium" />
+			break
+		case "logout":
+			display = <LoginIcon fontSize="small" className="rotate-180" />
+			break
+		case "membersite":
+			display = <LanguageIcon fontSize="small" />
+			break
+		case "offline":
+			display = <TripOriginIcon fontSize="xs" className="mr-1.5" />
 			break
 		case "oval":
 			display = <RefreshIcon fontSize="xs" />
 			break
 		case "paintdrop":
 			display = <WaterDropIcon fontSize="medium" />
+			break
+		case "profile":
+			display = <PersonIcon fontSize="small" />
+			break
+		case "quit":
+			display = <PowerSettingsNewIcon fontSize="small" />
 			break
 		case "replay":
 			display = <VideocamIcon fontSize="medium" />

@@ -1,4 +1,5 @@
 import Avatar from "boring-avatars"
+import { getIcon } from "../helpers/iconHelper"
 
 function ProfileButton({
 	username
@@ -12,9 +13,15 @@ function ProfileButton({
 					tabIndex={0}
 				/>
 			</label>
-			<ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-				<li><a>Item 1</a></li>
-				<li><a>Item 2</a></li>
+			<ul tabIndex={0} className="dropdown-content z-[1] menu shadow w-60">
+				<li><a>{getIcon("profile")}{username}</a></li>
+				<li><a>{getIcon("key")}Account</a></li>
+				<div className="profile-divider" />
+				<li><a>{getIcon("offline")}Appear Offline</a></li>
+				<div className="profile-divider" />
+				<li><a>{getIcon("membersite")}Classic Member Website</a></li>
+				<li><a>{getIcon("logout")}Sign Out</a></li>
+				<li><a>{getIcon("quit")}Quit</a></li>
 			</ul>
 		</div>
 	)

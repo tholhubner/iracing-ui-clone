@@ -10,7 +10,7 @@ function LicenseCluster({ userLicenses }) {
 	return (
 		<div className="license-group">
 			<div className="license-col">
-				<div className="license-item license-a">
+				<div className="license-item license-a tooltip tooltip-bottom" data-tip="hello">
 					{getIcon("oval")}
 					<span className="safety-rating-text">
 						{oval.safetyRating}

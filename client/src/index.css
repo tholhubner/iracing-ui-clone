@@ -235,10 +235,10 @@ main {
 	background-color: #181A1D;
 }
 
-/* .profile-button-icon {
-	height: auto;
-	width: auto;
-} */
+.profile-divider {
+	width: 100%;
+	border: #2D2F34 1px solid;
+}
 
 .safety-rating-text {
 	font-weight: bolder;
