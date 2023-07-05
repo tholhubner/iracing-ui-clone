@@ -23,13 +23,19 @@ export const userData = {
 			ttRating: 1333,
 		},
 		dirtRoad: {
-			class: "rookie",
+			class: "d",
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		}
 	},
-	favoriteSeries: [],
-	favoriteCars: [],
-	favoriteTracks: [],
+	favoriteSeries: [
+		"Testing 2",
+	],
+	favoriteCars: [
+		"Mercedes W13",
+	],
+	favoriteTracks: [
+		"Summit Point Raceway",
+	],
 }
