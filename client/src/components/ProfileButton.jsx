@@ -13,7 +13,7 @@ function ProfileButton({
 					tabIndex={0}
 				/>
 			</label>
-			<ul tabIndex={0} className="dropdown-content z-[1] menu shadow w-60">
+			<ul tabIndex={0} className="dropdown-content z-[1] menu shadow w-60 bg-ir-grey">
 				<li><a>{getIcon("profile")}{username}</a></li>
 				<li><a>{getIcon("key")}Account</a></li>
 				<div className="profile-divider" />
