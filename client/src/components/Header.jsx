@@ -8,29 +8,10 @@ import LicenseCluster from "./LicenseCluster"
 import ProfileButton from "./ProfileButton"
 
 function Header() {
-  const testingLicenses = {
-    oval: {
-      safetyRating: 3.34,
-      iRating: 1234
-    },
-    road: {
-      safetyRating: 3.23,
-      iRating: 2341
-    },
-    dirtOval: {
-      safetyRating: 2.54,
-      iRating: 1355
-    },
-    dirtRoad: {
-      safetyRating: 1.24,
-      iRating: 1223
-    }
-  }
-
+  const { walletBallance } = useSelector((state) => state.user.details)
   const showNavigation = useSelector((state) => state.various.showNavigation)
   const [currentTime, setCurrentTime] = useState(moment())
   const [navState, setNavState] = useState(showNavigation)
-  const [userLicenses, setUserLicenses] = useState(testingLicenses)
   const dispatch = useDispatch()
 
   const clockTimer = setTimeout(() => {
@@ -58,13 +39,13 @@ function Header() {
       </div>
       <div className="header-right">
         <div className="header-clock">{getIcon("clock")}{moment(currentTime).format("h:mm:ss a")}</div>
-        <button className="header-button">{getIcon("balance")}<span className="pt-0.5">$20.00</span></button>
+        <button className="header-button">{getIcon("balance")}<span className="pt-0.5">{walletBallance}</span></button>
         <button className="header-button">{getIcon("speaker")}</button>
         <button className="header-button">{getIcon("display")}</button>
         <button className="header-button">{getIcon("connection")}</button>
         <button className="header-button-clear">{getIcon("updates")}</button>
         <button className="header-button-clear">{getIcon("subscriptions")}</button>
-        <LicenseCluster userLicenses={userLicenses} />
+        <LicenseCluster />
         <ProfileButton
           username="Tyler Holhubner"
         />

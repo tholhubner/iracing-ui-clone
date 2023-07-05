@@ -3,13 +3,12 @@ import { useSelector } from "react-redux"
 import { getIcon } from "../helpers/iconHelper"
 
 function LicenseCluster() {
-	const licenses = useSelector((state) => state.user.licenses)
 	const {
 		dirtOval,
 		dirtRoad,
 		oval,
 		road,
-	} = licenses
+	} = useSelector((state) => state.user.licenses)
 	return (
 		<div className="license-group">
 			<div className="license-col">

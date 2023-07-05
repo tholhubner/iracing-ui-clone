@@ -1,9 +1,9 @@
 import Avatar from "boring-avatars"
 import { getIcon } from "../helpers/iconHelper"
+import { useSelector } from "react-redux"
 
-function ProfileButton({
-	username
-}) {
+function ProfileButton() {
+	const { username } = useSelector((state) => state.user.details)
 	return (
 		<div className="dropdown dropdown-end">
 			<label tabIndex={0} className="btn profile-button">
