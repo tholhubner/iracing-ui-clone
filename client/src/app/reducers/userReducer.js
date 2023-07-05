@@ -3,7 +3,7 @@ import { userData } from "../../testData/user"
 
 const initialState = userData
 
-export const variousReducer = createSlice({
+export const userReducer = createSlice({
   name: 'user',
   initialState,
   reducers: {
