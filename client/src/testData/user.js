@@ -1,34 +1,30 @@
 export const userData = {
-	licenses: [
-		{
-			type: "road",
-			class: "A",
+	licenses: {
+		road: {
+			class: "a",
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		},
-		{
-			type: "oval",
-			class: "C",
+		oval: {
+			class: "c",
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		},
-		{
-			type: "dirtRoad",
-			class: "B",
+		dirtOval: {
+			class: "b",
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		},
-		{
-			type: "dirtOval",
+		dirtRoad: {
 			class: "rookie",
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
-		},
-	],
+		}
+	},
 	favoriteSeries: [],
 	favoriteCars: [],
 	favoriteTracks: [],
