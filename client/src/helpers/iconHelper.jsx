@@ -35,6 +35,7 @@ import VideocamIcon from "@mui/icons-material/Videocam"
 import WalletIcon from "@mui/icons-material/Wallet"
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded"
 import WaterDropIcon from "@mui/icons-material/WaterDrop"
+import WhatshotIcon from "@mui/icons-material/Whatshot"
 
 export function getIcon(icon) {
 	let display
@@ -62,6 +63,9 @@ export function getIcon(icon) {
 			break
 		case "display":
 			display = <MonitorIcon fontSize="small" />
+			break
+		case "fire":
+			display = <WhatshotIcon fontSize="medium" className="mx-2" />
 			break
 		case "flag":
 			display = <FlagIcon fontSize="medium" />

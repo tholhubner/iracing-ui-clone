@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+	color: #F2F2F3;
   font-family: sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -12,7 +13,7 @@ body {
 }
 
 button:hover {
-	background-color: #2D2F34;
+	background-color: #2B2B34;
 }
 
 header {
@@ -30,7 +31,6 @@ main {
   display: flex;
   justify-content: center;
 	transform: scaleX(1);
-	padding: 12px;
 }
 
 .navigation {
@@ -238,6 +238,74 @@ main {
 .profile-divider {
 	width: 100%;
 	border: #2D2F34 1px solid;
+}
+
+.quick-access-actions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.quick-access-button {
+	background-color: #42424A;
+	width: 170px;
+	height: 50px;
+	margin-left: 5px;
+	margin-right: 10px;
+	border-radius: 8px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quick-access-button:hover {
+	background-color: #2B2B34
+}
+
+.quick-access-button-green {
+	background-color: #33CC00;
+	color: #0E2D0D;
+	width: 170px;
+	height: 50px;
+	margin-left: 5px;
+	margin-right: 10px;
+	border-radius: 8px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quick-access-button-green:hover {
+	background-color: #85E066;
+}
+
+.quick-access-button-text {
+	padding-top: 5px;
+	margin-left: 10px;
+}
+
+.quick-access-container {
+	width: 100%;
+	height: 95px;
+	border-bottom: #2D2F34 1px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.quick-access-text {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.quick-access-text-light {
+	font-size: 18px;
+	font-weight: lighter;
+	margin-left: 5px;
 }
 
 .safety-rating-text {
