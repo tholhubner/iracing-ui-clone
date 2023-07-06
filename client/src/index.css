@@ -58,7 +58,9 @@ main {
 }
 
 .navigation-hidden {
-	width: 0%;
+	width: 0px;
+	padding: 0px;
+	border-right: #2D2F34 0px solid;
 	visibility: hidden;
 }
 
