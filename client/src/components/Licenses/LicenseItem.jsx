@@ -1,4 +1,4 @@
-import { getIcon } from "../helpers/iconHelper"
+import { getIcon } from "../../helpers/iconHelper"
 
 function LicenseItem({ licenseType, license={}, listItem=false, licenseLevel=null }) {
 	const {
@@ -43,4 +43,4 @@ function LicenseItem({ licenseType, license={}, listItem=false, licenseLevel=nul
 	}
 }
 
-export default LicenseItem
+export { LicenseItem }

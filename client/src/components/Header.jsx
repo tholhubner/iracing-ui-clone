@@ -4,7 +4,7 @@ import moment from "moment"
 
 import { setShowNavigation } from "../app/reducers/variousReducer"
 import { getIcon } from "../helpers/iconHelper"
-import LicenseCluster from "./LicenseCluster"
+import { LicenseCluster } from "./Licenses"
 import ProfileButton from "./ProfileButton"
 
 function Header() {

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
-import { getIcon } from "../helpers/iconHelper"
-import LicenseItem from "./LicenseItem"
+import { getIcon } from "../../helpers/iconHelper"
+import { LicenseItem } from "./"
 
 function LicenseCluster() {
 	const {
@@ -24,4 +24,4 @@ function LicenseCluster() {
 	)
 }
 
-export default LicenseCluster
+export { LicenseCluster }

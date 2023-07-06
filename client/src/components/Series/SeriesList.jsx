@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux"
 import Avatar from "boring-avatars"
 import { getIcon } from "../../helpers/iconHelper"
-import LicenseItem from "../LicenseItem"
 import { useEffect, useState } from "react"
 import { setSeriesMPR } from "../../app/reducers/seriesReducer"
 import { meetsMPR } from "../../helpers/licenseHelper"
+import { LicenseItem } from "../Licenses"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
