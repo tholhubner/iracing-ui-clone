@@ -185,8 +185,7 @@ tr td:last-child {
 }
 
 .license-class-text {
-	font-weight: bolder;
-	margin-top: 2px;
+	font-weight: bold;
 }
 
 .license-col {
