@@ -5,25 +5,25 @@ export const userData = {
 	},
 	licenses: {
 		road: {
-			class: "a",
+			level: 1,
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		},
 		oval: {
-			class: "c",
+			level: 2,
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		},
 		dirtOval: {
-			class: "b",
+			level: 3,
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,
 		},
 		dirtRoad: {
-			class: "d",
+			level: 1,
 			safetyRating: 2.34,
 			iRating: 1234,
 			ttRating: 1333,

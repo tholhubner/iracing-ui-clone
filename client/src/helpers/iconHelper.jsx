@@ -2,8 +2,10 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime"
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 import CampaignIcon from "@mui/icons-material/Campaign"
 import ChangeCircleIcon from "@mui/icons-material/ChangeCircle"
+import CheckRoundedIcon from "@mui/icons-material/CheckRounded"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
 import DirectionsIcon from "@mui/icons-material/Directions"
+import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded"
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents"
 import FlagIcon from "@mui/icons-material/Flag"
 import GarageIcon from "@mui/icons-material/Garage"
@@ -14,17 +16,22 @@ import LanIcon from "@mui/icons-material/Lan"
 import LanguageIcon from "@mui/icons-material/Language"
 import LeaderboardIcon from "@mui/icons-material/Leaderboard"
 import LeakAddIcon from "@mui/icons-material/LeakAdd"
-import LoginIcon from "@mui/icons-material/Login";
+import LockRoundedIcon from "@mui/icons-material/LockRounded"
+import LoginIcon from "@mui/icons-material/Login"
 import MonitorIcon from "@mui/icons-material/Monitor"
 import PersonIcon from "@mui/icons-material/Person"
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew"
 import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined"
 import RefreshIcon from "@mui/icons-material/Refresh"
+import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded"
 import SearchIcon from "@mui/icons-material/Search"
 import SettingsIcon from "@mui/icons-material/Settings"
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag"
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded"
 import SmartToyOutlinedIcon from "@mui/icons-material/SmartToyOutlined"
 import SportsMotorsportsOutlinedIcon from "@mui/icons-material/SportsMotorsportsOutlined"
+import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded"
+import StarRoundedIcon from "@mui/icons-material/StarRounded"
 import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined"
 import SupportAgentIcon from "@mui/icons-material/SupportAgent"
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt"
@@ -49,23 +56,49 @@ export function getIcon(icon) {
 		case "calendar":
 			display = <CalendarMonthIcon fontSize="medium" />
 			break
+		case "cart":
+			display = <ShoppingCartRoundedIcon fontSize="small" sx={{ color: "#FF8533" }}/>
+		case "check":
+			display = <CheckRoundedIcon fontSize="small" sx={{ color: "#84DF66" }} />
+			break
+		case "check-blue":
+			display = <CheckRoundedIcon fontSize="small" sx={{ color: "#799AC8"}} />
+			break
+		case "check-header":
+			display = <CheckRoundedIcon fontSize="small" />
+			break 
 		case "clock":
 			display = <AccessTimeIcon fontSize="small" className="pr-1 pb-0.5" />
 			break
 		case "connection":
 			display = <LanIcon fontSize="small" />
 			break
-		case "dirtoval":
-			display = <ChangeCircleIcon fontSize="xs" />
+		case "dirtOval":
+			display = <ChangeCircleIcon fontSize="xs" className="mr-1" />
 			break
-		case "dirtroad":
-			display = <DirectionsIcon fontSize="xs" />
+		case "dirtRoad":
+			display = <DirectionsIcon fontSize="xs" className="mr-1" />
 			break
 		case "display":
 			display = <MonitorIcon fontSize="small" />
 			break
+		case "empty":
+			display = <RemoveRoundedIcon fontSize="small" />
+			break
+		case "favorite":
+			display = <StarRoundedIcon fontSize="small" sx={{ color: "#FFE066" }} />
+			break
+		case "favorite-empty":
+			display = <StarBorderRoundedIcon fontSize="small" />
+			break
+		case "favorite-header":
+			display = <StarRoundedIcon fontSize="small" />
+			break
 		case "fire":
 			display = <WhatshotIcon fontSize="medium" className="mx-2" />
+			break
+		case "fixed":
+			display = <LockRoundedIcon fontSize="small" />
 			break
 		case "flag":
 			display = <FlagIcon fontSize="medium" />
@@ -100,11 +133,20 @@ export function getIcon(icon) {
 		case "membersite":
 			display = <LanguageIcon fontSize="small" />
 			break
+		case "mpr-low":
+			display = <div style={{ fontSize: 18, fontWeight: "bold", padding: 5, color: "#FF8533" }}>=</div>
+			break
+		case "mpr-met":
+			display = <div style={{ fontSize: 18, fontWeight: "bold", padding: 5 }}>=</div>
+			break
+		case "mpr-up":
+			display = <DoubleArrowRoundedIcon fontSize="small" className="-rotate-90" sx={{ color: "#85E066" }} />
+			break
 		case "offline":
 			display = <TripOriginIcon fontSize="xs" className="mr-1.5" />
 			break
 		case "oval":
-			display = <RefreshIcon fontSize="xs" />
+			display = <RefreshIcon fontSize="xs" className="mr-1" />
 			break
 		case "paintdrop":
 			display = <WaterDropIcon fontSize="medium" />
@@ -119,7 +161,7 @@ export function getIcon(icon) {
 			display = <VideocamIcon fontSize="medium" />
 			break
 		case "road":
-			display = <TurnRightIcon fontSize="small" className="pb-1" />
+			display = <TurnRightIcon fontSize="xs" className="mb-0.5 mr-1" />
 			break
 		case "search":
 			display = <SearchIcon fontSize="medium" />
