@@ -38,4 +38,18 @@ export const userData = {
 	favoriteTracks: [
 		"Summit Point Raceway",
 	],
+	content: {
+		tracks: [
+			"Okayama Circuit",
+			"Road Atlanta",
+			"Summit Point Raceway",
+			"Suzuka Circuit (GP)",
+		],
+		cars: [
+			"BMW M4 GT3",
+			"Mazda MX-5 Cup",
+			"Mercedes W13",
+			"Toyota GR86 Cup",
+		]
+	}
 }

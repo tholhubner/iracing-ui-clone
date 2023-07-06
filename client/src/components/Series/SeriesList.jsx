@@ -6,6 +6,8 @@ import { setSeriesMPR } from "../../app/reducers/seriesReducer"
 import { meetsMPR } from "../../helpers/licenseHelper"
 import { LicenseItem } from "../Licenses"
 import { MultiCarDisplay } from "./MultiCarDisplay"
+import { addSeriesToFavorites, removeSeriesFromFavorites } from "../../app/reducers/userReducer"
+import { isSeriesFavorite } from "../../helpers/seriesListHelper"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
@@ -14,12 +16,6 @@ function SeriesList() {
 	const [localSeries, setLocalSeries] = useState([])
 	const dispatch = useDispatch()
 
-	const isSeriesFavorite = (series) => {
-		if (favoriteSeries.indexOf(series) > -1) {
-			return true
-		}
-		return false
-	}
 	useEffect(() => {
 		const length = series.length
 		const tempSeries = series
@@ -61,7 +57,14 @@ function SeriesList() {
 										index % 2 !== 0 && "series-table-item-alt"
 									].filter(Boolean).join(" ")
 								}>
-									<td>{isSeriesFavorite(item.title) ? getIcon("favorite") : getIcon("favorite-empty") }</td>
+									<td>
+										<div onClick={() => {
+											if (isSeriesFavorite(favoriteSeries, item.title)) dispatch(removeSeriesFromFavorites(item.title))
+											else dispatch(addSeriesToFavorites(item.title))
+										}}>
+											{isSeriesFavorite(favoriteSeries, item.title) ? getIcon("favorite") : getIcon("favorite-empty") }
+										</div>
+									</td>
 									<td></td>
 									<td></td>
 									<td className="series-table-item-license">
