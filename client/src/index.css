@@ -29,8 +29,8 @@ main {
   width: 100%;
   height: calc(100vh - 50px);
   display: flex;
-  justify-content: center;
-	transform: scaleX(1);
+	flex-direction: column;
+  justify-content: flex-start;
 }
 
 .navigation {
@@ -151,6 +151,11 @@ main {
 	align-items: center;
 }
 
+.license-class-text {
+	font-weight: bolder;
+	margin-top: 2px;
+}
+
 .license-col {
 	display: flex;
 	flex-direction: column;
@@ -174,31 +179,31 @@ main {
 	padding-top: 1px;
 }
 
-.license-a {
+.license-4 {
 	color: #006EFF;
 	background-color: #032E6F;
 	border: #006EFF 1px solid;
 }
 
-.license-b {
+.license-3 {
 	color: #33CC00;
 	background-color: #165509;
 	border: #33CC00 1px solid;
 }
 
-.license-c {
+.license-2 {
 	color: #FFCC00;
 	background-color: #50410A;
 	border: #FFCC00 1px solid;
 }
 
-.license-d {
+.license-1 {
 	color: #FF6600;
 	background-color: #692C09;
 	border: #FF6600 1px solid;
 }
 
-.license-rookie {
+.license-0 {
 	color: #E1251C;
 	background-color: #5D1214;
 	border: #E1251C 1px solid;

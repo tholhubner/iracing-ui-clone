@@ -35,6 +35,7 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded"
 import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined"
 import SupportAgentIcon from "@mui/icons-material/SupportAgent"
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt"
+import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined"
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave"
 import TripOriginIcon from "@mui/icons-material/TripOrigin"
 import TurnRightIcon from "@mui/icons-material/TurnRight"
@@ -186,6 +187,9 @@ export function getIcon(icon) {
 			break
 		case "team":
 			display = <GroupsSharpIcon fontSize="medium" />
+			break
+		case "timer":
+			display = <TimerOutlinedIcon fontSize="small" />
 			break
 		case "trophy":
 			display = <EmojiEventsIcon fontSize="medium" />

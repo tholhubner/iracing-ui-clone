@@ -19,7 +19,7 @@ export const userReducer = createSlice({
 				tempArray.splice(index, 1)
 			}
 			state.favoriteTracks = tempArray
-		}
+		},
   },
 })
 

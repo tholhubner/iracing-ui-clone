@@ -6,6 +6,7 @@ import {
 } from "./components"
 import { NavigationBar } from "./components/Navigation"
 import QuickAccess from "./components/QuickAccess"
+import { SeriesList } from "./components/Series"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <NavigationBar />
           <main>
             <QuickAccess />
+            <SeriesList />
           </main>
         </div>
       </div>

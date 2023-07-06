@@ -1,13 +1,13 @@
 import { getIcon } from "../helpers/iconHelper"
 
-function LicenseItem({ license, licenseType, listItem=false }) {
+function LicenseItem({ licenseType, license={}, listItem=false, licenseLevel=null }) {
 	const {
 		level,
 		safetyRating,
 		iRating,
 	} = license
-	const getLicenseString = (licenseType) => {
-		switch(level) {
+	const getLicenseString = (type) => {
+		switch(type) {
 			case 0:
 				return "Rookie"
 			case 1:
@@ -21,23 +21,26 @@ function LicenseItem({ license, licenseType, listItem=false }) {
 		}
 	}
 
-	console.log(license.prototype)
-
-	return (
-		<div className={`license-item license-${String(level)}`}>
-			{getIcon(licenseType)}
-			{ listItem === true ? (
-				<div>{getLicenseString(licenseType)}</div>
-			) : (
-				<>
-					<span className="safety-rating-text-road">
-						{safetyRating}
-					</span>
-					{iRating}
-				</>
-			)}
-		</div>
-	)
+	if (listItem) {
+		return (
+			<div className={`license-item license-${String(licenseLevel)}`}>
+				{getIcon(licenseType)}
+				<span className="license-class-text">
+					{getLicenseString(licenseLevel)}
+				</span>
+			</div>
+		)
+	} else {
+		return (
+			<div className={`license-item license-${String(level)}`}>
+				{getIcon(licenseType)}
+				<span className="safety-rating-text-road">
+					{safetyRating}
+				</span>
+				{iRating}
+			</div>
+		)
+	}
 }
 
 export default LicenseItem
