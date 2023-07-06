@@ -1,6 +1,6 @@
 import Avatar from "boring-avatars"
-import { getIcon } from "../helpers/iconHelper"
 import { useSelector } from "react-redux"
+import { getIcon } from "../../helpers/iconHelper"
 
 function ProfileButton() {
 	const { username } = useSelector((state) => state.user.details)
@@ -27,4 +27,4 @@ function ProfileButton() {
 	)
 }
 
-export default ProfileButton
+export { ProfileButton }

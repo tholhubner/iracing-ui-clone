@@ -1,13 +1,12 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import moment from "moment"
+import { setShowNavigation } from "../../app/reducers/variousReducer"
+import { getIcon } from "../../helpers/iconHelper"
+import { LicenseCluster } from "../Licenses"
+import { ProfileButton } from "./ProfileButton"
 
-import { setShowNavigation } from "../app/reducers/variousReducer"
-import { getIcon } from "../helpers/iconHelper"
-import { LicenseCluster } from "./Licenses"
-import ProfileButton from "./ProfileButton"
-
-function Header() {
+function HeaderBar() {
   const { walletBallance } = useSelector((state) => state.user.details)
   const showNavigation = useSelector((state) => state.various.showNavigation)
   const [currentTime, setCurrentTime] = useState(moment())
@@ -46,12 +45,10 @@ function Header() {
         <button className="header-button-clear">{getIcon("updates")}</button>
         <button className="header-button-clear">{getIcon("subscriptions")}</button>
         <LicenseCluster />
-        <ProfileButton
-          username="Tyler Holhubner"
-        />
+        <ProfileButton />
       </div>
     </header>
   )
 }
 
-export { Header }
+export { HeaderBar }
