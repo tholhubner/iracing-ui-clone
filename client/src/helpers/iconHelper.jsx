@@ -143,7 +143,7 @@ export function getIcon(icon) {
 			display = <div style={{ fontSize: 18, fontWeight: "bold", padding: 5, color: "#FF8533" }}>=</div>
 			break
 		case "mpr-met":
-			display = <div style={{ fontSize: 18, fontWeight: "bold", padding: 5 }}>=</div>
+			display = <div style={{ fontSize: 18, fontWeight: "bold"}}>=</div>
 			break
 		case "mpr-up":
 			display = <DoubleArrowRoundedIcon fontSize="small" className="-rotate-90" sx={{ color: "#85E066" }} />

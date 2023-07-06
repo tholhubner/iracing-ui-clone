@@ -48,5 +48,15 @@ export const seriesList = [
 		teamEvent: false,
 		licenseType: "road",
 		official: true,
-	}
+	},
+	{
+		title: "Testing Oval Rookie",
+		license: 0,
+		cars: ["Street Stock"],
+		track: "Kentucky Speedway",
+		fixed: true,
+		teamEvent: false,
+		licenseType: "oval",
+		official: true,
+	},
 ]

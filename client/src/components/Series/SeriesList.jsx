@@ -38,8 +38,8 @@ function SeriesList() {
 						<th>{getIcon("favorite-header")}</th>
 						<th>{getIcon("timer")}</th>
 						<th>{getIcon("helmet")}</th>
-						<th>License</th>
-						<th align="center">Logo</th>
+						<th className="series-table-header-license">License</th>
+						<th className="series-table-header-logo">Logo</th>
 						<th className="series-table-header-long">Series</th>
 						<th className="series-table-header-long">Car(s)</th>
 						<th className="series-table-header-long">Track</th>
@@ -71,9 +71,9 @@ function SeriesList() {
 											listItem
 										/>	
 									</td>
-									<td className="series-table-item-non-text">
+									<td className="series-table-item-logo">
 										<Avatar
-											size={30}
+											size={25}
 											name={item.title}
 											square
 											variant="pixel"
