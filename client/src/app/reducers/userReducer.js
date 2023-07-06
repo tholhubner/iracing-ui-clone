@@ -8,17 +8,17 @@ export const userReducer = createSlice({
   initialState,
   reducers: {
     addSeriesToFavorites: (state, action) => {
-			const tempArray = state.favoriteTracks
+			const tempArray = state.favoriteSeries
 			tempArray.push(action.payload)
       state.favoriteTracks = tempArray
     },
 		removeSeriesFromFavorites: (state, action) => {
-			const index = state.favoriteTracks.indexOf(action.payload)
-			const tempArray = state.favoriteTracks
+			const index = state.favoriteSeries.indexOf(action.payload)
+			const tempArray = state.favoriteSeries
 			if (index > -1) {
 				tempArray.splice(index, 1)
 			}
-			state.favoriteTracks = tempArray
+			state.favoriteSeries = tempArray
 		},
   },
 })
