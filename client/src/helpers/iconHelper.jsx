@@ -5,6 +5,7 @@ import ChangeCircleIcon from "@mui/icons-material/ChangeCircle"
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
 import DirectionsIcon from "@mui/icons-material/Directions"
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded"
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents"
 import FlagIcon from "@mui/icons-material/Flag"
@@ -57,8 +58,12 @@ export function getIcon(icon) {
 		case "calendar":
 			display = <CalendarMonthIcon fontSize="medium" />
 			break
+		case "cars":
+			display = <DirectionsCarIcon fontSize="small" className="pb-1 pr-1" />
+			break
 		case "cart":
 			display = <ShoppingCartRoundedIcon fontSize="small" sx={{ color: "#FF8533" }}/>
+			break
 		case "check":
 			display = <CheckRoundedIcon fontSize="small" sx={{ color: "#84DF66" }} />
 			break

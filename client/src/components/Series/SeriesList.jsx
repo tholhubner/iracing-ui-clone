@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { setSeriesMPR } from "../../app/reducers/seriesReducer"
 import { meetsMPR } from "../../helpers/licenseHelper"
 import { LicenseItem } from "../Licenses"
+import { MultiCarDisplay } from "./MultiCarDisplay"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
@@ -65,7 +66,7 @@ function SeriesList() {
 										/>
 									</td>
 									<td>{item.title}</td>
-									<td>{item.cars.length > 1 ? `${item.cars.length} Cars` : item.cars[0]}</td>
+									<td>{item.cars.length > 1 ? <MultiCarDisplay carCount={item.cars.length} /> : item.cars[0]}</td>
 									<td>{item.track}</td>
 									<td>{item.teamEvent ? getIcon("team") : getIcon("empty")}</td>
 									<td>{item.fixed ? getIcon("fixed") : getIcon("empty")}</td>
