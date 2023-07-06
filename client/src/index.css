@@ -344,6 +344,24 @@ tr td:last-child {
 	margin-left: 5px;
 }
 
+.register-button {
+	background-color: #33CC00;
+	color: #0E2D0D;
+	width: 130px;
+	height: 25px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-bottom: 5px;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.register-button:hover {
+	background-color: #85E066;
+}
+
 .safety-rating-text {
 	font-weight: bolder;
 	padding-right: 3px;
@@ -407,4 +425,21 @@ tr td:last-child {
 
 .top-nav {
 	justify-self: flex-start;
+}
+
+.view-series-button {
+	background-color: #006EFF;
+	width: 130px;
+	height: 25px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-bottom: 3px;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.view-series-button:hover {
+	background-color: #6d90dd;
 }

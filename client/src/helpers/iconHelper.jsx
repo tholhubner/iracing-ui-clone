@@ -67,6 +67,9 @@ export function getIcon(icon) {
 		case "check":
 			display = <CheckRoundedIcon fontSize="small" sx={{ color: "#84DF66" }} />
 			break
+		case "check-dark":
+			display = <CheckRoundedIcon fontSize="small" sx={{ color: "#0E2D0D", paddingTop: "3px" }} />
+			break
 		case "check-blue":
 			display = <CheckRoundedIcon fontSize="small" sx={{ color: "#799AC8"}} />
 			break
@@ -109,6 +112,9 @@ export function getIcon(icon) {
 		case "flag":
 			display = <FlagIcon fontSize="medium" />
 			break
+		case "flag-small":
+			display = <FlagIcon fontSize="small" className="pt-1" />
+			break
 		case "forum":
 			display = <QuestionAnswerOutlinedIcon fontSize="medium" />
 			break
@@ -140,7 +146,7 @@ export function getIcon(icon) {
 			display = <LanguageIcon fontSize="small" />
 			break
 		case "mpr-low":
-			display = <div style={{ fontSize: 18, fontWeight: "bold", padding: 5, color: "#FF8533" }}>=</div>
+			display = <div style={{ fontSize: 18, fontWeight: "bold", color: "#FF8533" }}>=</div>
 			break
 		case "mpr-met":
 			display = <div style={{ fontSize: 18, fontWeight: "bold"}}>=</div>

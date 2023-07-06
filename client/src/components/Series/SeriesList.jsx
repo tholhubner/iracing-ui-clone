@@ -55,7 +55,7 @@ function SeriesList() {
 						.map((item, index) => {
 							console.log(item)
 							return (
-								<tr className={
+								<tr key={index} className={
 									[
 										"series-table-item",
 										index % 2 !== 0 && "series-table-item-alt"
@@ -86,7 +86,19 @@ function SeriesList() {
 									<td>{item.fixed ? getIcon("fixed") : getIcon("empty")}</td>
 									<td>{item.mpr === "low" ? getIcon("check-blue") : getIcon("check")}</td>
 									<td>{item.official ? getIcon(`mpr-${item.mpr}`) : getIcon("empty")}</td>
-									<td></td>
+									<td>
+										{item.mpr === "low" ? (
+											<button className="view-series-button">
+												{getIcon("flag-small")}
+												<p className="nav-item-button-text">View Series</p>
+											</button>
+										) : (
+											<button className="register-button">
+												{getIcon("check-dark")}
+												<p className="nav-item-button-text">Register</p>
+											</button>
+											)}
+									</td>
 								</tr>
 							)
 						})}
