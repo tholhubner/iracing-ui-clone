@@ -59,6 +59,7 @@ main {
 
 .navigation-hidden {
 	width: 0%;
+	visibility: hidden;
 }
 
 .blue-button {
