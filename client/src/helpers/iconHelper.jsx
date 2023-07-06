@@ -5,7 +5,7 @@ import ChangeCircleIcon from "@mui/icons-material/ChangeCircle"
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
 import DirectionsIcon from "@mui/icons-material/Directions"
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded"
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents"
 import FlagIcon from "@mui/icons-material/Flag"
@@ -30,6 +30,7 @@ import SettingsIcon from "@mui/icons-material/Settings"
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag"
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded"
 import SmartToyOutlinedIcon from "@mui/icons-material/SmartToyOutlined"
+import SportsMotorsportsIcon from "@mui/icons-material/SportsMotorsports"
 import SportsMotorsportsOutlinedIcon from "@mui/icons-material/SportsMotorsportsOutlined"
 import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded"
 import StarRoundedIcon from "@mui/icons-material/StarRounded"
@@ -126,6 +127,9 @@ export function getIcon(icon) {
 			break
 		case "helmet":
 			display = <SportsMotorsportsOutlinedIcon fontSize="medium" />
+			break
+		case "helmet-filled":
+			display = <SportsMotorsportsIcon fontSize="small" />
 			break
 		case "help":
 			display = <SupportAgentIcon fontSize="medium" />

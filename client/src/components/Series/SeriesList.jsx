@@ -8,6 +8,7 @@ import { LicenseItem } from "../Licenses"
 import { MultiCarDisplay } from "./MultiCarDisplay"
 import { addSeriesToFavorites, removeSeriesFromFavorites } from "../../app/reducers/userReducer"
 import { isSeriesFavorite } from "../../helpers/seriesListHelper"
+import { DriverCountDisplay } from "./DriverCountDisplay"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
@@ -33,7 +34,7 @@ function SeriesList() {
 					<tr>
 						<th>{getIcon("favorite-header")}</th>
 						<th>{getIcon("timer")}</th>
-						<th>{getIcon("helmet")}</th>
+						<th className="series-table-header-drivers">{getIcon("helmet")}</th>
 						<th className="series-table-header-license">License</th>
 						<th className="series-table-header-logo">Logo</th>
 						<th className="series-table-header-long">Series</th>
@@ -66,7 +67,7 @@ function SeriesList() {
 										</div>
 									</td>
 									<td></td>
-									<td></td>
+									<td className="series-table-item-license"><DriverCountDisplay /></td>
 									<td className="series-table-item-license">
 										<LicenseItem
 											licenseType={item.licenseType}
