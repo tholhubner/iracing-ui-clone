@@ -29,18 +29,20 @@ function SeriesList() {
 		}
 	}, [series])
 	return (
-		<div className="overflow-x-auto">
-			<table className="table table-zebra">
-				<thead>
+		<div className="overflow-x-auto p-20">
+			<h1 className="text-4xl p-1">Series List</h1>
+			<div className="standard-divider" />
+			<table className="series-table">
+				<thead className="series-table-header">
 					<tr>
 						<th>{getIcon("favorite-header")}</th>
 						<th>{getIcon("timer")}</th>
 						<th>{getIcon("helmet")}</th>
 						<th>License</th>
-						<th>Logo</th>
-						<th>Series</th>
-						<th>Car(s)</th>
-						<th>Track</th>
+						<th align="center">Logo</th>
+						<th className="series-table-header-long">Series</th>
+						<th className="series-table-header-long">Car(s)</th>
+						<th className="series-table-header-long">Track</th>
 						<th>Team</th>
 						<th>Fixed</th>
 						<th>{getIcon("check-header")}</th>
@@ -53,21 +55,33 @@ function SeriesList() {
 						.map((item, index) => {
 							console.log(item)
 							return (
-								<tr>
+								<tr className={
+									[
+										"series-table-item",
+										index % 2 !== 0 && "series-table-item-alt"
+									].filter(Boolean).join(" ")
+								}>
 									<td>{isSeriesFavorite(item.title) ? getIcon("favorite") : getIcon("favorite-empty") }</td>
 									<td></td>
 									<td></td>
-									<td><LicenseItem licenseType={item.licenseType} licenseLevel={item.license} listItem /></td>
-									<td>
+									<td className="series-table-item-license">
+										<LicenseItem
+											licenseType={item.licenseType}
+											licenseLevel={item.license}
+											listItem
+										/>	
+									</td>
+									<td className="series-table-item-non-text">
 										<Avatar
+											size={30}
 											name={item.title}
 											square
 											variant="pixel"
 										/>
 									</td>
-									<td>{item.title}</td>
-									<td>{item.cars.length > 1 ? <MultiCarDisplay carCount={item.cars.length} /> : item.cars[0]}</td>
-									<td>{item.track}</td>
+									<td className="series-table-header-long">{item.title}</td>
+									<td className="series-table-header-long">{item.cars.length > 1 ? <MultiCarDisplay carCount={item.cars.length} /> : item.cars[0]}</td>
+									<td className="series-table-header-long">{item.track}</td>
 									<td>{item.teamEvent ? getIcon("team") : getIcon("empty")}</td>
 									<td>{item.fixed ? getIcon("fixed") : getIcon("empty")}</td>
 									<td>{item.mpr === "low" ? getIcon("check-blue") : getIcon("check")}</td>
