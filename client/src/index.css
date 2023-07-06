@@ -107,6 +107,24 @@ tr td:last-child {
 	background-color: #393B3F;
 }
 
+.driver-count-container {
+	min-width: none;
+	max-width: 60px;
+	margin:auto;
+	width: fit-content;
+	background-color: #fff;
+	color: #000;
+	padding-left: 6px;
+	padding-right: 7px;
+	padding-top: 1px;
+	border-radius: 20px;
+}
+
+.driver-count-text {
+	padding-left: 2px;
+	font-weight: lighter;
+}
+
 .header-button {
 	height: 30px;
 	max-width: 100%;
@@ -381,6 +399,10 @@ tr td:last-child {
 .series-table-header {
 	background-color: rgba(162, 172, 185, 0.1);
 	height: 25px;
+}
+
+.series-table-header-drivers {
+	width: 100px;
 }
 
 .series-table-header-license {
