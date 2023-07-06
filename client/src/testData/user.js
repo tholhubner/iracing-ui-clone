@@ -1,6 +1,6 @@
 export const userData = {
 	details: {
-		username: "Tyler Holhubner",
+		username: "Jaime Baker",
 		walletBallance: "$20.00",
 	},
 	licenses: {

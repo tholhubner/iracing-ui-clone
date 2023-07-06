@@ -185,8 +185,7 @@ tr td:last-child {
 }
 
 .license-class-text {
-	font-weight: bolder;
-	margin-top: 2px;
+	font-weight: bold;
 }
 
 .license-col {
@@ -204,15 +203,17 @@ tr td:last-child {
 .license-item {
 	height: 22px;
 	min-width: 85px;
-	max-width: 85px;
+	max-width: 90px;
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-top: 1px;
 	border-radius: 8px;
 	margin: auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	font-size: 12px;
 }
 
 .license-4 {
