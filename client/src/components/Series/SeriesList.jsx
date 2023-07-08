@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import Avatar from "boring-avatars"
-import { getIcon } from "../../helpers/iconHelper"
 import { useEffect, useMemo, useState } from "react"
 import { meetsMPR } from "../../helpers/licenseHelper"
 import { LicenseItem } from "../Licenses"
@@ -8,6 +7,7 @@ import { MultiCarDisplay } from "./MultiCarDisplay"
 import { addSeriesToFavorites, removeSeriesFromFavorites } from "../../app/reducers/userReducer"
 import { filterSeries, isSeriesFavorite } from "../../helpers/seriesListHelper"
 import { DriverCountDisplay } from "./DriverCountDisplay"
+import { getIcon } from "../../helpers/iconHelper"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
