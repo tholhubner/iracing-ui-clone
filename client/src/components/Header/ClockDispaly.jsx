@@ -7,6 +7,7 @@ function ClockDisplay() {
 
 	const clockTimer = setTimeout(() => {
     setCurrentTime(moment().format("h:mm:ss a"))
+		clearTimeout(clockTimer)
   }, 1000)
 
 	return (
