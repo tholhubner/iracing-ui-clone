@@ -13,7 +13,9 @@ export const filterSeries = (licenses, series) => {
 	for (let i = 0; i < length; i++) {
 		const item = {...series[i]}
 		item.mpr = meetsMPR(series[i].license, licenses[series[i].licenseType].level)
-		item.guid = createGUID()
+		if (!item.guid) {
+			item.guid = createGUID()
+		}
 		tempArray.push(item)
 	}
 	return tempArray
