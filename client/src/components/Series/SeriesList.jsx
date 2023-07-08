@@ -1,30 +1,20 @@
 import { useDispatch, useSelector } from "react-redux"
 import Avatar from "boring-avatars"
 import { getIcon } from "../../helpers/iconHelper"
-import { useEffect, useState } from "react"
-import { setSeriesMPR } from "../../app/reducers/seriesReducer"
+import { useEffect, useMemo, useState } from "react"
 import { meetsMPR } from "../../helpers/licenseHelper"
 import { LicenseItem } from "../Licenses"
 import { MultiCarDisplay } from "./MultiCarDisplay"
 import { addSeriesToFavorites, removeSeriesFromFavorites } from "../../app/reducers/userReducer"
-import { isSeriesFavorite } from "../../helpers/seriesListHelper"
+import { filterSeries, isSeriesFavorite } from "../../helpers/seriesListHelper"
 import { DriverCountDisplay } from "./DriverCountDisplay"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
 	const favoriteSeries = useSelector((state) => state.user.favoriteSeries)
 	const licenses = useSelector((state) => state.user.licenses)
-	const [localSeries, setLocalSeries] = useState([])
-	const dispatch = useDispatch()
+	const cachedSeries = useMemo(() => filterSeries(licenses, series), [licenses, series])
 
-	useEffect(() => {
-		const length = series.length
-		const tempSeries = series
-		const tempArray = []
-		for (let i = 0; i < length; i++) {
-			dispatch(setSeriesMPR({index: i, mprValue: meetsMPR(series[i].license, licenses[series[i].licenseType].level)}))
-		}
-	}, [series])
 	return (
 		<div className="overflow-x-auto p-20">
 			<h1 className="text-4xl p-1">Series List</h1>
@@ -48,7 +38,7 @@ function SeriesList() {
 					</tr>
 				</thead>
 				<tbody>
-					{series
+					{cachedSeries
 						.map((item, index) => {
 							console.log(item)
 							return (
