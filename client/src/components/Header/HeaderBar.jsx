@@ -1,28 +1,21 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import moment from "moment"
 import { setShowNavigation } from "../../app/reducers/variousReducer"
 import { getIcon } from "../../helpers/iconHelper"
 import { LicenseCluster } from "../Licenses"
 import { ProfileButton } from "./ProfileButton"
+import { ClockDisplay } from "./ClockDispaly"
 
 function HeaderBar() {
   const { walletBallance } = useSelector((state) => state.user.details)
   const showNavigation = useSelector((state) => state.various.showNavigation)
-  const [currentTime, setCurrentTime] = useState(moment())
-  const [navState, setNavState] = useState(showNavigation)
   const dispatch = useDispatch()
-
-  const clockTimer = setTimeout(() => {
-    setCurrentTime(moment())
-  }, 1000)
 
   return (
     <header>
       <div className="header-left">
         <button className="btn btn-square" onClick={() => {
-          setNavState(!navState) 
-          dispatch(setShowNavigation(!navState))
+          dispatch(setShowNavigation(!showNavigation))
         }}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current text-white">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -37,7 +30,7 @@ function HeaderBar() {
         <div className="badge badge-neutral pt-1 px-1 mx-1">10,000 ONLINE</div>
       </div>
       <div className="header-right">
-        <div className="header-clock">{getIcon("clock")}{moment(currentTime).format("h:mm:ss a")}</div>
+        <ClockDisplay />
         <button className="header-button">{getIcon("balance")}<span className="pt-0.5">{walletBallance}</span></button>
         <button className="header-button">{getIcon("speaker")}</button>
         <button className="header-button">{getIcon("display")}</button>
