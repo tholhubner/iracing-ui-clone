@@ -11,8 +11,10 @@ import { DriverCountDisplay } from "./DriverCountDisplay"
 
 function SeriesList() {
 	const series = useSelector((state) => state.series)
-	const favoriteSeries = useSelector((state) => state.user.favoriteSeries)
-	const licenses = useSelector((state) => state.user.licenses)
+	const {
+		favoriteSeries,
+		licenses
+	} = useSelector((state) => state.user)
 	const cachedSeries = useMemo(() => filterSeries(licenses, series), [licenses, series])
 
 	return (
